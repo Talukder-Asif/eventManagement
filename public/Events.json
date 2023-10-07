@@ -1,0 +1,102 @@
+[
+    {
+      "id": "1",
+      "name": "Wedding",
+      "images": [
+        "https://i.ibb.co/q10c8kk/Wedding1.jpg",
+        "https://i.ibb.co/tcw2Ysp/Wedding2.jpg",
+        "https://i.ibb.co/9TYg2Y4/Wedding3.jpg"
+      ],
+      "price": "$10,000 - $50,000",
+      "description": "Transform your dream wedding into reality with our expert event planning services. From intimate ceremonies to grand celebrations, we curate every detail to make your special day truly unforgettable. Our experienced team will work closely with you to design the perfect ambiance, choose exquisite floral arrangements, and select gourmet cuisine that reflects your style and personality. Let us take care of everything, so you can focus on creating lasting memories."
+    },
+    {
+      "id": "2",
+      "name": "Birthday Party",
+      "images": [
+        "https://i.ibb.co/9WyqrFS/Birthday-Party3.jpg",
+        "https://i.ibb.co/JQFZWPM/Birthday-Party1.webp",
+        "https://i.ibb.co/3YbVNF0/Birthday-Party2.jpg"
+      ],
+      "price": "$500 - $5,000",
+      "description": "From whimsical children's parties to sophisticated adult celebrations, we specialize in crafting memorable birthday experiences. Our talented team will bring your unique vision to life, from themed decor and entertainment to mouthwatering cakes and delightful surprises. Whether you're celebrating a milestone birthday or a fun-filled children's party, our attention to detail and creativity will ensure an unforgettable experience for you and your guests."
+    },
+    {
+      "id": "3",
+      "name": "Anniversary",
+      "images": [
+        "https://i.ibb.co/w6TfsBh/Anniversary3.jpg",
+        "https://i.ibb.co/PCNP0jR/Anniversary1.jpg",
+        "https://i.ibb.co/9pWzDzk/Anniversary2.jpg"
+      ],
+      "price": "$1,000 - $10,000",
+      "description": "Celebrate the enduring love story you share with an anniversary event that captures the essence of your journey together. Our team specializes in crafting romantic and heartfelt celebrations that honor your years of commitment. Whether you prefer an intimate dinner or a grand soirée, we will curate an atmosphere of love and togetherness. Let us create an anniversary experience that rekindles the sparks of your relationship."
+    },
+    {
+      "id": "4",
+      "name": "Engagement Party",
+      "images": [
+        "https://i.ibb.co/DrwPZxs/Engagement-Party2.jpg",
+        "https://i.ibb.co/c6MMpCQ/Engagement-Party3.jpg",
+        "https://i.ibb.co/LpD6Cyt/Engagement-Party1.jpg"
+      ],
+      "price": "$2,000 - $8,000",
+      "description": "Announce your engagement in style with a party that reflects your unique love story. We specialize in creating engagement events that capture the excitement and anticipation of your journey toward marriage. From elegant decor and photo-worthy moments to personalized touches that celebrate your relationship, our team will ensure your engagement party is a memorable and joyous occasion."
+    },
+    {
+      "id": "5",
+      "name": "Retirement Party",
+      "images": [
+        "https://i.ibb.co/Rv6zrKP/Retirement-Party-3.jpg",
+        "https://i.ibb.co/NWw9RBW/Retirement-Party.jpg",
+        "https://i.ibb.co/ykS5tvW/Retirement-Party1.jpg"
+      ],
+      "price": "$1,500 - $7,000",
+      "description": "Bid farewell to a dedicated career with a retirement party that honors your accomplishments and looks ahead to new adventures. Our retirement parties are a blend of nostalgia and excitement, filled with heartfelt speeches, creative themes, and customized decor. Whether you're planning an intimate gathering or a large celebration, our team will help you create a memorable transition into retirement."
+    },
+    {
+      "id": "6",
+      "name": "Baby Shower",
+      "images": [
+        "https://i.ibb.co/3Y2s9Jq/Baby-Shower1.jpg",
+        "https://i.ibb.co/Mnj8TL2/Baby-Shower3.jpg",
+        "https://i.ibb.co/Qdn88Ff/Baby-Shower2.jpg"
+      ],
+      "price": "$500 - $3,000",
+      "description": "Celebrate the imminent arrival of a new family member with a warm and welcoming baby shower. Our baby showers are designed to create lasting memories for parents-to-be and their loved ones. From adorable decorations and themed games to delicious treats and heartfelt moments, we'll ensure your baby shower is a heartwarming occasion filled with joy and anticipation."
+    },
+    {
+      "id": "7",
+      "name": "Bridal Shower",
+      "images": [
+        "https://i.ibb.co/6tp4sqy/Bridal-Shower1.jpg",
+        "https://i.ibb.co/SQCvddK/Bridal-Shower3.jpg",
+        "https://i.ibb.co/X85SW1n/Bridal-Shower.jpg"
+      ],
+      "price": "$500 - $3,000",
+      "description": "Pamper the bride-to-be with an elegant bridal shower that celebrates her journey to the altar. Our bridal showers are all about sophistication and style, featuring tasteful decor, interactive activities, and delightful treats. Whether you're planning a chic tea party or a glamorous soirée, we'll create a memorable event that the bride and her guests will cherish."
+    },
+    {
+      "id": "9",
+      "name": "Eid Party",
+      "images": [
+        "https://i.ibb.co/SnRxNKd/Eid-Party.jpg",
+        "https://i.ibb.co/Q9n98yj/Eid-Party1.jpg",
+        "https://i.ibb.co/zJ64xRW/Eid-Party2.jpg"
+      ],
+      "price": "$500 - $5,000",
+      "description": "Experience the joy of Eid with vibrant celebrations that bring families and friends together. Our Eid parties are a feast for the senses, featuring colorful decorations, traditional cuisine, and cultural festivities. Whether you're hosting a small gathering or a community-wide event, we'll ensure your Eid party is a memorable occasion filled with laughter and love."
+    },
+    {
+      "id": "11",
+      "name": "Christmas Party",
+      "images": [
+        "https://i.ibb.co/nbKGjFd/Christmas-Party1.jpg",
+        "https://i.ibb.co/fXt0dmL/Christmas-Party2.jpg",
+        "https://i.ibb.co/5jmtBFf/Christmas-Party.webp"
+      ],
+      "price": "$1,000 - $10,000",
+      "description": "Experience the magic of Christmas with our enchanting holiday parties. Our Christmas celebrations are filled with festive decorations, delicious treats, and a visit from Santa Claus himself. Whether you're hosting a corporate Christmas gathering or a cozy family party, our team will bring the spirit of the season to life, creating joyful memories for all."
+    }
+  ]
+  
