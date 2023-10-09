@@ -2,16 +2,14 @@
 import { useContext } from "react";
 import { AuthContex } from "../../Provaider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const {Login, GoogleLogin}= useContext(AuthContex);
 // Handalling login with email and password
   const HandelSubmit = (e) => {
     e.preventDefault();
-    // const email = e.target.email.value
-    // const password = e.target.password.value
-
-    // New way to get form data
     const from = new FormData(e.currentTarget);
     const email = from.get('email');
     const password= from.get('password');
@@ -19,11 +17,13 @@ const Login = () => {
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+      toast("Welcome to Happy Events!",)
       // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      toast(errorMessage)
     })
   }
 
@@ -35,6 +35,7 @@ const Login = () => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
+      toast("Successfully Signing in with Google")
       // The signed-in user info.
       const user = result.user;
       // IdP data available using getAdditionalUserInfo(result)
@@ -43,6 +44,7 @@ const Login = () => {
       // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
+      toast(errorMessage)
       // The email of the user's account used.
       const email = error.customData.email;
       // The AuthCredential type that was used.
@@ -89,12 +91,26 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn text-white hover:text-black bg-[#fd614a]">Login</button>
+              <button className="btn text-white hover:bg-[#ff792f] bg-[#fd614a]">Login</button>
             </div>
           </form>
               <button onClick={GoogleBtn} className="underline mb-4">Join Us with Google</button>
         </div>
       </div>
+      <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            />
+            {/* Same as */}
+          <ToastContainer />
     </div>
   );
 };
