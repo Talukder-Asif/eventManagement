@@ -7,10 +7,13 @@ import image_1 from "/src/assets/2-1.jpg";
 import { useEffect, useState } from "react";
 import Servise from "./Service/Servise";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 const Home = () => {
   const [Events, setEvents] = useState();
   useEffect(() => {
-    fetch("/public/Events.json")
+    fetch("Events.json")
       .then((res) => res.json())
       .then((data) => setEvents(data?.slice(0, 6)));
   }, []);
@@ -18,7 +21,8 @@ const Home = () => {
   return (
     <div>
       {/* Reset 1st slider */}
-      <div className="h-[300px] lg:h-[600px] bg-center bg-cover bg-[url('https://demo.ovatheme.com/dvents/wp-content/uploads/2017/06/bg-1-1.jpg')] relative">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom" className="h-[300px] lg:h-[600px] bg-center bg-cover bg-[url('https://demo.ovatheme.com/dvents/wp-content/uploads/2017/06/bg-1-1.jpg')] relative">
         <div className="w-full h-full p-5 md:p-40 text-center bg-black bg-opacity-70 grid content-center items-center">
           <p className="italic text-base md:text-2xl md:mb-10 font-bold text-white">
             Best Event Management Services in your city
@@ -31,7 +35,7 @@ const Home = () => {
 
       {/* 2nd part */}
       <div className="grid px-5 md:grid-cols-2 lg:grid-cols-4 gap-5 w-11/12 m-auto my-10">
-        <div className="card   bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card   bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <PiMaskHappyLight className="text-7xl text-[#ff5b00]"></PiMaskHappyLight>
           </figure>
@@ -46,7 +50,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="card   bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card   bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <BsBalloon className="text-7xl text-[#ff5b00]"></BsBalloon>
           </figure>
@@ -61,7 +65,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="card   bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card   bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <GiGlassCelebration className="text-7xl text-[#ff5b00]"></GiGlassCelebration>
           </figure>
@@ -76,7 +80,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="card   bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card   bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <MdOutlineCelebration className="text-7xl text-[#ff5b00]"></MdOutlineCelebration>
           </figure>
@@ -98,9 +102,9 @@ const Home = () => {
         <h3 className="text-3xl md:text-5xl text-center font-bold text-[#242120] py-10">
           Our Services
         </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div data-aos="flip-up" className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {Events?.map((Event) => (
-            <Servise key={Event.id} Event={Event}></Servise>
+            <Servise  key={Event.id} Event={Event}></Servise>
           ))}
         </div>
         <div className="text-center">
@@ -125,8 +129,8 @@ const Home = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="px-5 md:px-10 rounded-full py-2 md:py-5 bg-[#ff4e50] text-white font-bold text-base md:text-lg hover:bg-[#ff6000]">
-              Let Gets Started!
+            <button data-aos="fade-in-right" className="px-5 md:px-10 rounded-full py-2 md:py-5 bg-[#ff4e50] text-white font-bold text-base md:text-lg hover:bg-[#ff6000]">
+              <a href="/contact">Let Gets Started!</a>
             </button>
           </div>
         </div>

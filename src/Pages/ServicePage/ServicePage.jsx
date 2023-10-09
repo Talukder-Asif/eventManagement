@@ -6,7 +6,7 @@ import image_1 from "/src/assets/EventPlanner.jpg"
 const ServicePage = () => {
     const [Events, setEvents] = useState();
   useEffect(() => {
-    fetch('/public/Events.json')
+    fetch('Events.json')
     .then(res => res.json())
     .then(data => setEvents(data))
   },[])

@@ -7,7 +7,7 @@ const SingleEvent = () => {
 
   const [Events, setEvents] = useState();
   useEffect(() => {
-    fetch("/public/Events.json")
+    fetch("/Events.json")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);

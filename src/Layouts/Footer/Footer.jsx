@@ -1,8 +1,9 @@
+import image_1 from "/src/assets/bottom-logo.png"
 const Footer = () => {
     return (
 <footer className="footer md:grid md:grid-cols-4 p-10 bg-[#1f1f1f] text-base-content">
     <div className="col-span-2">
-        <img src="/src/assets/bottom-logo.png" alt="" />
+        <img src={image_1} alt="" />
         <p className="text-gray-300">Bacon ipsum dolor amet filet mignon pork belly hamburger pork tail shank pig andouille, pork loin cow sausage meatball capicola. Kielbasa porchetta meatball pig pork loin short ribs sirloin jowl landjaeger tail beef ribs rump</p>
     </div> 
     <div>

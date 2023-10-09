@@ -11,7 +11,8 @@ const Login = () => {
   const navigate = useNavigate();
   const toastes = () =>{
     toast("Successfully Signing")
-    // navigate(location?.state ? location.state : '/')
+          // navigate(location?.state ? location.state : '/')
+
   }
 
   const {Login, GoogleLogin}= useContext(AuthContex);
@@ -24,7 +25,7 @@ const Login = () => {
     Login(email, password)
     .then((userCredential) => {
       toast("Welcome to Happy Events!");
-      // navigate(location?.state ? location.state : '/')
+      navigate(location?.state ? location.state : '/')
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -39,6 +40,7 @@ const Login = () => {
     .then((result) => {
 
       toastes()
+      // navigate(location?.state ? location.state : '/')
 
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;

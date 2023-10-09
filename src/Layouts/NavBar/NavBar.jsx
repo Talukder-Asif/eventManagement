@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css"
 import { useContext } from "react";
 import { AuthContex } from "../../Provaider/AuthProvider";
+import image_1 from "/src/assets/logo.png"
+import image_2 from "/src/assets/user.png"
 
 const NavBar = () => {
   // Importing user details
@@ -61,7 +63,7 @@ const NavBar = () => {
             {manuItem}
           </ul>
         </div>
-        <img className="w-36" src="/src/assets/logo.png" alt="" />
+        <img className="w-36" src={image_1} alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu-horizontal font-semibold text-white text-lg">{manuItem}</ul>
@@ -73,7 +75,7 @@ const NavBar = () => {
       <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src={user? user?.photoURL? user?.photoURL : "/src/assets/user.png" : "/src/assets/user.png"} />
+          <img src={user? user.photoURL : `${image_2}`} />
         </div>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
