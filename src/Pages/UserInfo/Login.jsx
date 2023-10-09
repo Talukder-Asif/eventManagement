@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
 import { AuthContex } from "../../Provaider/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-  const {Login}= useContext(AuthContex);
-
+  const {Login, GoogleLogin}= useContext(AuthContex);
+// Handalling login with email and password
   const HandelSubmit = (e) => {
-
     e.preventDefault();
     // const email = e.target.email.value
     // const password = e.target.password.value
@@ -26,12 +26,36 @@ const Login = () => {
       const errorMessage = error.message;
     })
   }
+
+
+  // Handalling user with gmail
+  const GoogleBtn =() =>{
+    GoogleLogin()
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      // IdP data available using getAdditionalUserInfo(result)
+      // ...
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    })
+  }
   return (
     <div className="bg-[#f3f3f3] grid content-center items-center min-h-screen">
       <div className="">
         <div className="card m-auto flex-shrink-0 max-w-md shadow-2xl bg-base-100">
         <h3 className="text-center text-4xl font-semibold text-[#403F3F] my-5">Login your account</h3>
-          <form onSubmit={HandelSubmit} className="card-body">
+          <form onSubmit={HandelSubmit} className="card-body pb-1">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -68,6 +92,7 @@ const Login = () => {
               <button className="btn text-white hover:text-black bg-[#fd614a]">Login</button>
             </div>
           </form>
+              <button onClick={GoogleBtn} className="underline mb-4">Join Us with Google</button>
         </div>
       </div>
     </div>

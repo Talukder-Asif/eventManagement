@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { NavLink } from "react-router-dom";
 import "./Nav.css"
 import { useContext } from "react";
@@ -6,6 +7,8 @@ import { AuthContex } from "../../Provaider/AuthProvider";
 const NavBar = () => {
   // Importing user details
   const {user,LogOut}= useContext(AuthContex)
+
+  console.log(user)
   // Handalling Logout
   const HandelLogOut = () => {
     LogOut()
@@ -67,14 +70,14 @@ const NavBar = () => {
       <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="/src/assets/user.png" />
+          <img src={user? user?.photoURL? user?.photoURL : "/src/assets/user.png" : "/src/assets/user.png"} />
         </div>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         {
           user? (<div>
+            <li>{user.displayName? user.displayName : user.email}</li>
             <li><a onClick={HandelLogOut} href="/signin">LogOut</a></li>
-            <p>{user.email}</p>
             </div>
           ):
           <div>

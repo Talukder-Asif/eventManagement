@@ -13,6 +13,7 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import Login from './Pages/UserInfo/Login';
 import AuthProvider from './Provaider/AuthProvider';
 import CreateAccount from './Pages/UserInfo/CreateAccount';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/services/:id",
-        element: <SingleEvent></SingleEvent>
+        element: <PrivateRoute>
+        <SingleEvent></SingleEvent>
+        </PrivateRoute>
       },
       {
         path:"/about",
