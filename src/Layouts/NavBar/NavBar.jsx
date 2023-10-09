@@ -1,7 +1,20 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css"
+import { useContext } from "react";
+import { AuthContex } from "../../Provaider/AuthProvider";
 
 const NavBar = () => {
+  // Importing user details
+  const {user,LogOut}= useContext(AuthContex)
+  // Handalling Logout
+  const HandelLogOut = () => {
+    LogOut()
+    .then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+    })
+  }
   const manuItem = (
     <>
       <li>
@@ -9,6 +22,9 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink to={"/about"}>About us</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/services"}>Services</NavLink>
       </li>
     </>
   );
@@ -55,7 +71,18 @@ const NavBar = () => {
         </div>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Logout</a></li>
+        {
+          user? (<div>
+            <li><a onClick={HandelLogOut} href="/signin">LogOut</a></li>
+            <p>{user.email}</p>
+            </div>
+          ):
+          <div>
+          <li><a href="/signin">Login</a></li>
+          <li><a href="/signup">SignUp</a></li>
+          </div>
+        
+        }
       </ul>
     </div>
 

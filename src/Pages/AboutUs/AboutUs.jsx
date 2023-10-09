@@ -1,139 +1,116 @@
 /* eslint-disable react/no-unescaped-entities */
+import image_1 from "/src/assets/EventPlanner.jpg"
+import image_2 from "/src/assets/6-2.jpg"
+import image_3 from "/src/assets/3-3.jpg"
+import image_4 from "/src/assets/5-2.jpg"
+import image_5 from "/src/assets/2-1.jpg"
+import image_6 from "/src/assets/7-2.jpg"
+import image_7 from "/src/assets/8-2.jpg"
 import { PiMaskHappyLight } from "react-icons/pi";
 import { BsBalloon } from "react-icons/bs";
 import { GiGlassCelebration } from "react-icons/gi";
 import { MdOutlineCelebration } from "react-icons/md";
-import image_1 from "/src/assets/2-1.jpg";
-import { useEffect, useState } from "react";
-import Servise from "./Service/Servise";
-import { Link } from "react-router-dom";
-const Home = () => {
-  const [Events, setEvents] = useState();
-  useEffect(() => {
-    fetch("/public/Events.json")
-      .then((res) => res.json())
-      .then((data) => setEvents(data?.slice(0, 6)));
-  }, []);
-  console.log(Events);
-  return (
-    <div>
-      {/* Reset 1st slider */}
-      <div className="h-[300px] lg:h-[600px] bg-center bg-cover bg-[url('https://demo.ovatheme.com/dvents/wp-content/uploads/2017/06/bg-1-1.jpg')] relative">
-        <div className="w-full h-full p-5 md:p-40 text-center bg-black bg-opacity-70 grid content-center items-center">
-          <p className="italic text-base md:text-2xl md:mb-10 font-bold text-white">
-            Best Event Management Services in your city
-          </p>
-          <h3 className="text-2xl md:text-5xl font-bold text-white ">
-            CELEBRATE YOUR SPECIAL EVENTS MORE SPECIAL
-          </h3>
-        </div>
-      </div>
 
-      {/* 2nd part */}
-      <div className="grid px-5 md:grid-cols-2 lg:grid-cols-4 gap-5 w-11/12 m-auto my-10">
-        <div className="card   bg-base-100 shadow-xl">
-          <figure className="px-10 pt-10">
+const AboutUs = () => {
+    return (
+        <div>
+            <div className="hero bg-center bg-cover min-h-[350px] lg:min-h-[500px] md:min-h-[400px] mb-10" style={{backgroundImage: `url(${image_1})`}}>
+  <div className="w-full h-full text-[#fd614a] text-center bg-black bg-opacity-80 grid content-center items-center">
+    <div className="px-">
+      <h2 className="mb-5 text-3xl underline md:text-5xl font-bold">About Us</h2>
+    </div>
+  </div>
+</div>
+        {/* 1st about */}
+        <div className="md:flex gap-10 my-10 px-5">
+            <div className="grid md:w-1/2 lg:w-4/5 mb-5 content-center items-center">
+                <h2 className="text-4xl font-bold ">Who We Are?</h2>
+                <p className="text-black font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis semper tortor. Quisque non felis elementum augue ullamcorper laoreet. Nam porta leo ut felis suscipit, vel semper lectus vehicula. Nulla vitae porta leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce bibendum arcu in lacinia condimentum.</p>
+            </div>
+            <div className=" md:w-1/2 lg:1/5">
+            <img className="rounded-md w-full" src={image_2} alt="" />
+            </div>
+        </div>
+        {/* 2nd About */}
+        <div className="md:flex gap-10 flex-row-reverse my-10 px-5">
+            <div className="grid md:w-1/2 lg:w-4/5 mb-5 content-center items-center">
+                <h2 className="text-4xl font-bold ">What We Can Do?</h2>
+                <p className="text-black font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis semper tortor. Quisque non felis elementum augue ullamcorper laoreet. Nam porta leo ut felis suscipit, vel semper lectus vehicula. Nulla vitae porta leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce bibendum arcu in lacinia condimentum.</p>
+            </div>
+            <div className=" md:w-1/2 lg:1/5">
+            <img className="rounded-md w-full" src={image_3} alt="" />
+            </div>
+        </div>
+
+
+        <div className="my-10 bg-[#ff4e50] text-center py-10">
+            <h2 className="text-4xl font-bold text-white">Four Reasons Why You Should Choose Us</h2>
+        </div>
+        
+
+        {/* 3nd About */}
+        <div className="md:flex flex-row-reverse">
+        <div className="md:w-1/2">
+            <div className="grid content-center items-center">
+          <div className="card-body items-center text-center">
             <PiMaskHappyLight className="text-7xl text-[#ff5b00]"></PiMaskHappyLight>
-          </figure>
-          <div className="card-body items-center text-center">
             <h2 className="card-title">Friendly Team</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <div className="card-actions">
-              <button className="text-[#ff4e50] font-bold text-lg hover:underline">
-                About Us
-              </button>
-            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis semper tortor.Quisque non felis elementum augue ullamcorper laoreet. Nulla vitae porta leo.</p>
           </div>
         </div>
-
-        <div className="card   bg-base-100 shadow-xl">
-          <figure className="px-10 pt-10">
+            </div>
+            <div className=" md:w-1/2">
+            <img className=" w-full" src={image_4} alt="" />
+            </div>
+        </div>
+        {/* 4nd About */}
+        <div className="md:flex ">
+        <div className="md:w-1/2">
+            <div className="grid content-center items-center">
+          <div className="card-body items-center text-center">
             <BsBalloon className="text-7xl text-[#ff5b00]"></BsBalloon>
-          </figure>
-          <div className="card-body items-center text-center">
             <h2 className="card-title">Perfect Venues</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <div className="card-actions">
-              <button className=" text-[#ff4e50] font-bold text-lg hover:underline">
-                Events
-              </button>
-            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis semper tortor.Quisque non felis elementum augue ullamcorper laoreet. Nulla vitae porta leo.</p>
           </div>
         </div>
-
-        <div className="card   bg-base-100 shadow-xl">
-          <figure className="px-10 pt-10">
+            </div>
+            <div className=" md:w-1/2">
+            <img className=" w-full" src={image_5} alt="" />
+            </div>
+        </div>
+        {/* 5nd About */}
+        <div className="md:flex flex-row-reverse">
+        <div className="md:w-1/2">
+            <div className="grid content-center items-center">
+          <div className="card-body items-center text-center">
             <GiGlassCelebration className="text-7xl text-[#ff5b00]"></GiGlassCelebration>
-          </figure>
-          <div className="card-body items-center text-center">
             <h2 className="card-title">Unique Scenarios</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <div className="card-actions">
-              <button className=" text-[#ff4e50] font-bold text-lg hover:underline">
-                Our Team
-              </button>
-            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis semper tortor.Quisque non felis elementum augue ullamcorper laoreet. Nulla vitae porta leo.</p>
           </div>
         </div>
-
-        <div className="card   bg-base-100 shadow-xl">
-          <figure className="px-10 pt-10">
-            <MdOutlineCelebration className="text-7xl text-[#ff5b00]"></MdOutlineCelebration>
-          </figure>
+            </div>
+            <div className=" md:w-1/2">
+            <img className=" w-full" src={image_6} alt="" />
+            </div>
+        </div>
+        {/* 6nd About */}
+        <div className="md:flex ">
+        <div className="md:w-1/2">
+            <div className="grid content-center items-center">
           <div className="card-body items-center text-center">
+            <MdOutlineCelebration className="text-7xl text-[#ff5b00]"></MdOutlineCelebration>
             <h2 className="card-title">Unforgettable Time</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <div className="card-actions">
-              <button className=" text-[#ff4e50] font-bold text-lg hover:underline">
-                Contact Us
-              </button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis semper tortor.Quisque non felis elementum augue ullamcorper laoreet. Nulla vitae porta leo.</p>
+          </div>
+        </div>
             </div>
-          </div>
+            <div className=" md:w-1/2">
+            <img className=" w-full" src={image_7} alt="" />
+            </div>
         </div>
-      </div>
-
-      {/* 3rd Section */}
-
-      <div className="pt-5 md:pt-10 px-5">
-        <h3 className="text-3xl md:text-5xl text-center font-bold text-[#242120] py-10">
-          Our Services
-        </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {Events?.map((Event) => (
-            <Servise key={Event.id} Event={Event}></Servise>
-          ))}
-        </div>
-        <div className="text-center">
-          <button className="px-5 md:px-10 my-10 rounded-full py-2 md:py-5 bg-[#ff4e50] text-white font-semibold text-base md:text-lg hover:bg-[#ff6000]">
-            <Link to={`/services`}>Show More</Link>
-          </button>
-        </div>
-      </div>
-
-      {/* 4rd section */}
-      <div
-        className="hero bg-center bg-cover min-h-[350px] lg:min-h-[500px] md:min-h-[400px] my-10"
-        style={{ backgroundImage: `url(${image_1})` }}
-      >
-        <div className=" text-center text-neutral-content">
-          <div className="max-w-2xl">
-            <h2 className="mb-5 text-3xl md:text-5xl font-bold">
-              Celebrate With Us!
-            </h2>
-            <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="px-5 md:px-10 rounded-full py-2 md:py-5 bg-[#ff4e50] text-white font-bold text-base md:text-lg hover:bg-[#ff6000]">
-              Let Gets Started!
-            </button>
-          </div>
-        </div>
-      </div>
-
-        {/* 5th section(customer review) */}
-      <div>
+        
+{/* 5th section(customer review) */}
+<div className="mt-10 border-t-2">
       <h2 className="text-5xl text-center mb-5 font-bold text-[#fd614a] ">Our Happy Clint</h2>
       <div className="grid mb-8 px-5 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
   <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
@@ -223,8 +200,9 @@ const Home = () => {
 
 
 
-    </div>
-  );
+
+        </div>
+    );
 };
 
-export default Home;
+export default AboutUs;
