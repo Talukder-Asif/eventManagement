@@ -1,21 +1,22 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { AuthContex } from "../Provaider/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContex)
+    const location = useLocation();
 
     if(loading){
-        return<div className="h-screen ">
-            <span className="loading text-[#fd614a] loading-spinner loading-lg"></span>
+        return<div className="h-screen w-screen grid content-center justify-center">
+            <span className="loading text-[#fd614a] loading-spinner text-center loading-lg"></span>
         </div>
     }
 
     if(user){
         return children
     }
-    return <Navigate to="/signin"></Navigate>
+    return <Navigate state={location.pathname} to="/signin"></Navigate>
      
 };
 

@@ -4,8 +4,16 @@ import { AuthContex } from "../../Provaider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const toastes = () =>{
+    toast("Successfully Signing")
+    // navigate(location?.state ? location.state : '/')
+  }
+
   const {Login, GoogleLogin}= useContext(AuthContex);
 // Handalling login with email and password
   const HandelSubmit = (e) => {
@@ -15,13 +23,10 @@ const Login = () => {
     const password= from.get('password');
     Login(email, password)
     .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      toast("Welcome to Happy Events!",)
-      // ...
+      toast("Welcome to Happy Events!");
+      // navigate(location?.state ? location.state : '/')
     })
     .catch((error) => {
-      const errorCode = error.code;
       const errorMessage = error.message;
       toast(errorMessage)
     })
@@ -32,12 +37,15 @@ const Login = () => {
   const GoogleBtn =() =>{
     GoogleLogin()
     .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
+
+      toastes()
+
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
-      toast("Successfully Signing in with Google")
       // The signed-in user info.
       const user = result.user;
+
+
       // IdP data available using getAdditionalUserInfo(result)
       // ...
     }).catch((error) => {

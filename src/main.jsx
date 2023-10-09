@@ -14,11 +14,14 @@ import Login from './Pages/UserInfo/Login';
 import AuthProvider from './Provaider/AuthProvider';
 import CreateAccount from './Pages/UserInfo/CreateAccount';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import Contact from './Pages/Contact/Contact';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path: "/",
@@ -36,7 +39,9 @@ const router = createBrowserRouter([
       },
       {
         path:"/about",
-        element:<AboutUs></AboutUs>
+        element:<PrivateRoute>
+        <AboutUs></AboutUs>
+        </PrivateRoute>
       },
       {
         path:"/signin",
@@ -45,6 +50,13 @@ const router = createBrowserRouter([
       {
         path:"/signup",
         element:<CreateAccount></CreateAccount>
+      },
+      {
+        path:"/contact",
+        element:<PrivateRoute>
+          <Contact></Contact>
+        </PrivateRoute>
+        
       }
     ]
   },
