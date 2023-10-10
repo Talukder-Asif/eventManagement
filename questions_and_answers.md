@@ -18,7 +18,7 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: B ?
+#### Answer: B: `ReferenceError: greetign is not defined`
 
 <i>greetign is not defined when we assign the object, so trying to assign an object to it will result in a ReferenceError. To fix this we can do : let greeting = {};</i>
 
