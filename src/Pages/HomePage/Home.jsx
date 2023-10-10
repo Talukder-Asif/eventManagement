@@ -102,7 +102,7 @@ const Home = () => {
         <h3 className="text-3xl md:text-5xl text-center font-bold text-[#242120] py-10">
           Our Services
         </h3>
-        <div data-aos="flip-up" className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {Events?.map((Event) => (
             <Servise  key={Event.id} Event={Event}></Servise>
           ))}
@@ -129,7 +129,7 @@ const Home = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button data-aos="fade-in-right" className="px-5 md:px-10 rounded-full py-2 md:py-5 bg-[#ff4e50] text-white font-bold text-base md:text-lg hover:bg-[#ff6000]">
+            <button className="px-5 md:px-10 rounded-full py-2 md:py-5 bg-[#ff4e50] text-white font-bold text-base md:text-lg hover:bg-[#ff6000]">
               <a href="/contact">Let Gets Started!</a>
             </button>
           </div>

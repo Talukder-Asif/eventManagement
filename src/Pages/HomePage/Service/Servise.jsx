@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
 const Servise = ({Event}) => {
     return (
-        <div className="card bg-base-100 shadow-2xl">
+        <div data-aos="zoom-in-down" className="card bg-base-100 shadow-2xl">
   <figure><img src={Event.images[0]} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{Event.name}</h2>

@@ -16,7 +16,7 @@ const SingleEvent = () => {
 
   return (
     <div>
-      <div className="carousel w-full">
+      <div data-aos="zoom-in-down" className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={Event?.images[0]} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

@@ -1,8 +1,5 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This is a ervent managment company's website. It can dynamicly show the the event that the company served.
+- It have a login and sign up page where user can login or create there account.
+- user can create account with there email. Thay can also log in using google account.
+- If a user dose not log in, thay cant not see the event details page, about page and contact page.
+- Thay can show there name , picture in the nav bar.

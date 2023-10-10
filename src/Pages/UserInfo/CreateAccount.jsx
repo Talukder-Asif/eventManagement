@@ -5,7 +5,14 @@ import { AuthContex } from "../../Provaider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 const CreateAccount = () => {
+  const navigate = useNavigate();
+  const toastes = () =>{
+    toast("Successfully Signup")
+    navigate('/')
+
+  }
     const {CreateUser,updateUser, GoogleLogin}= useContext(AuthContex);
 
     // Handalling user with gmail
@@ -14,7 +21,7 @@ const CreateAccount = () => {
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
-      toast("Successfully Signup")
+      toastes()
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
@@ -67,8 +74,7 @@ const CreateAccount = () => {
       if(name || image){
         updateUser(name, image)
       .then(() => {
-        // Profile updated!
-        // ...
+        toastes()
       }).catch((error) => {
         console.error(error)
       })

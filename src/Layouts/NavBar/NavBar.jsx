@@ -63,7 +63,7 @@ const NavBar = () => {
             {manuItem}
           </ul>
         </div>
-        <img className="w-36" src={image_1} alt="" />
+        <a href="/"><img className="w-36" src={image_1} alt="" /></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu-horizontal font-semibold text-white text-lg">{manuItem}</ul>

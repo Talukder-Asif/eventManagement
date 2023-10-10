@@ -20,7 +20,7 @@ console.log(greetign);
 
 #### Answer: B ?
 
-<i>Write your explanation here</i>
+<i>greetign is not defined when we assign the object, so trying to assign an object to it will result in a ReferenceError. To fix this we can do : let greeting = {};</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: 12
+#### Answer: C: `"12"`
 
-<i>In this case, the + operator concatenates the number 1 and the string "2", resulting in the string "12"</i>
+<i>, here 1 is a int but "2" is a string. If we make add between a int and a str then the compailer concate them and output is also a string.</i>
 
 </p>
 </details>
@@ -69,9 +69,11 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A 
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i>const info = { favoriteFood: food[0] } 
+  hear info is a object and food is a array. Arrays and objects in JavaScript are reference types. So the change in the object dose not change the array.
+</i>
 
 </p>
 </details>
@@ -94,9 +96,10 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: B
+####  B: `Hi there, undefined`
 
-<i>Write your explanation here</i>
+<i>console.log(sayHi());
+here we does not send any argument in the function, so it will find undefined in the function coz we use a parameters in function. So it declear undefined in name parameter and it will print in console.</i>
 
 </p>
 </details>
@@ -122,9 +125,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A
+#### Answer: C: 3
 
-<i>Write your explanation here</i>
+<i>in the condition, it just chake is the number is truth or false. We khon all number except 0 are meaning truth, but zero is a falsy number. So the condition will full fill 3 time and after the loop the count will 3.</i>
 
 </p>
 </details>
